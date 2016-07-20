@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		2D6F61971D3B458F0040241D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F61961D3B458F0040241D /* main.m */; };
 		2D6F619A1D3B458F0040241D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F61991D3B458F0040241D /* AppDelegate.m */; };
-		2D6F619D1D3B458F0040241D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F619C1D3B458F0040241D /* ViewController.m */; };
+		2D6F619D1D3B458F0040241D /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F619C1D3B458F0040241D /* QuestionViewController.m */; };
 		2D6F61A01D3B458F0040241D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F619E1D3B458F0040241D /* Main.storyboard */; };
 		2D6F61A21D3B458F0040241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F61A11D3B458F0040241D /* Assets.xcassets */; };
 		2D6F61A51D3B458F0040241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F61A31D3B458F0040241D /* LaunchScreen.storyboard */; };
+		2DA5CFAF1D3EFB7300B7316C /* QuestionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5CFAE1D3EFB7300B7316C /* QuestionRecord.m */; };
+		2DA5CFB31D3EFB9F00B7316C /* QuizRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5CFB21D3EFB9F00B7316C /* QuizRecord.m */; };
+		2DA5CFB61D3F0AC400B7316C /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA5CFB51D3F0AC400B7316C /* QuizViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		2D6F61961D3B458F0040241D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D6F61981D3B458F0040241D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2D6F61991D3B458F0040241D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2D6F619B1D3B458F0040241D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2D6F619C1D3B458F0040241D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2D6F619B1D3B458F0040241D /* QuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		2D6F619C1D3B458F0040241D /* QuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		2D6F619F1D3B458F0040241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D6F61A11D3B458F0040241D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D6F61A41D3B458F0040241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D6F61A61D3B458F0040241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA5CFAE1D3EFB7300B7316C /* QuestionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionRecord.m; sourceTree = "<group>"; };
+		2DA5CFB01D3EFB8400B7316C /* QuestionRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionRecord.h; sourceTree = "<group>"; };
+		2DA5CFB11D3EFB8F00B7316C /* QuizRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizRecord.h; sourceTree = "<group>"; };
+		2DA5CFB21D3EFB9F00B7316C /* QuizRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizRecord.m; sourceTree = "<group>"; };
+		2DA5CFB41D3F0AC400B7316C /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizViewController.h; sourceTree = "<group>"; };
+		2DA5CFB51D3F0AC400B7316C /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +69,19 @@
 			children = (
 				2D6F61981D3B458F0040241D /* AppDelegate.h */,
 				2D6F61991D3B458F0040241D /* AppDelegate.m */,
-				2D6F619B1D3B458F0040241D /* ViewController.h */,
-				2D6F619C1D3B458F0040241D /* ViewController.m */,
+				2D6F619B1D3B458F0040241D /* QuestionViewController.h */,
+				2D6F619C1D3B458F0040241D /* QuestionViewController.m */,
+				2DA5CFB41D3F0AC400B7316C /* QuizViewController.h */,
+				2DA5CFB51D3F0AC400B7316C /* QuizViewController.m */,
 				2D6F619E1D3B458F0040241D /* Main.storyboard */,
 				2D6F61A11D3B458F0040241D /* Assets.xcassets */,
 				2D6F61A31D3B458F0040241D /* LaunchScreen.storyboard */,
 				2D6F61A61D3B458F0040241D /* Info.plist */,
 				2D6F61951D3B458F0040241D /* Supporting Files */,
+				2DA5CFAE1D3EFB7300B7316C /* QuestionRecord.m */,
+				2DA5CFB01D3EFB8400B7316C /* QuestionRecord.h */,
+				2DA5CFB11D3EFB8F00B7316C /* QuizRecord.h */,
+				2DA5CFB21D3EFB9F00B7316C /* QuizRecord.m */,
 			);
 			path = Homework;
 			sourceTree = "<group>";
@@ -150,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6F619D1D3B458F0040241D /* ViewController.m in Sources */,
+				2D6F619D1D3B458F0040241D /* QuestionViewController.m in Sources */,
 				2D6F619A1D3B458F0040241D /* AppDelegate.m in Sources */,
+				2DA5CFAF1D3EFB7300B7316C /* QuestionRecord.m in Sources */,
 				2D6F61971D3B458F0040241D /* main.m in Sources */,
+				2DA5CFB31D3EFB9F00B7316C /* QuizRecord.m in Sources */,
+				2DA5CFB61D3F0AC400B7316C /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +321,7 @@
 				2D6F61AB1D3B458F0040241D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,40 +6,23 @@
 //  Copyright © 2016 Big Nerd Ranch. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "QuestionViewController.h"
+
 #import <QuartzCore/QuartzCore.h>
 
-@interface ViewController ()
-@property (nonatomic) IBOutlet UILabel *questionLabel;
-@property (nonatomic) IBOutlet UILabel *numberLabel;
-@property (nonatomic) IBOutlet UITextField *answerText;
-@property (nonatomic) IBOutlet UILabel *timerLabel;
-@property (nonatomic) IBOutlet UIButton *nextButton;
+#import "QuizRecord.h"
 
-@property (nonatomic) NSString *question;
+@interface QuestionViewController ()
 
-@property (nonatomic) int currentQuestionIndex;
+@property (nonatomic) NSDate *questionBeginTime;
 
-@property (nonatomic) int a;
-@property (nonatomic) int b;
-@property (nonatomic) int x;
-@property (nonatomic) int answer;
-
-@property (nonatomic) IBOutlet UIProgressView *progressView;
-@property (nonatomic) IBOutlet NSTimer *timer;
-@property (nonatomic) int totalQuestions;
-@property (nonatomic) int totalCorrectAnswers;
-@property (nonatomic) BOOL answerIsWrong;
-
-@property (nonatomic) NSDate *startTime;
 @end
 
-@implementation ViewController
+@implementation QuestionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
     
     self.currentQuestionIndex = 0;
     self.totalQuestions = 50;
@@ -64,6 +47,8 @@
         _progressView.progress = 0.0;
         self.totalCorrectAnswers = 0;
         self.answerIsWrong = NO;
+        
+        [[QuizRecord sharedQuizRecord] removeAllObjects];
     }
     
     if (self.currentQuestionIndex >= self.totalQuestions) {
@@ -79,6 +64,7 @@
         return;
     }
     
+    self.questionBeginTime = [NSDate date];
     [self.nextButton setTitle:@"Next" forState:UIControlStateNormal];
     
     int operation = [self getRandomNumberBetween:1 to:4];
@@ -134,7 +120,14 @@
         }
         self.answerText.text = @"";
         
+        if (self.currentQuestionIndex) {
+            int duration = (int)-[self.questionBeginTime timeIntervalSinceNow];
+            QuestionRecord *record = [[QuestionRecord alloc] initWithQuestion:self.questionLabel.text time:duration];
+            [QuizRecord addQuestion:record];
+        }
+        
         [self prepareNextQuestion];
+        
         self.answerText.backgroundColor = [UIColor whiteColor];
     } else {
         self.answerText.text = @"";
@@ -157,7 +150,7 @@
 
 -(void)onTick:(NSTimer*)timer
 {
-    NSTimeInterval timeInterval = [self.startTime timeIntervalSinceNow];
+    NSTimeInterval timeInterval = -[self.startTime timeIntervalSinceNow];
     self.timerLabel.text = [self stringFromTimeInterval:timeInterval];
 }
 
