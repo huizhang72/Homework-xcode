@@ -21,6 +21,5 @@
 -(void)setQuestion:(int)index question:(QuestionRecord *)question;
 +(void)addQuestion:(QuestionRecord *)question;
 -(QuestionRecord *)getQuestion:(int)index;
--(void)removeAllQuestions;
 
 @end

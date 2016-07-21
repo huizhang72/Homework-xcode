@@ -22,4 +22,6 @@
 - (NSString *)getQuestion;
 - (int)getTime;
 
+- (NSComparisonResult)timeCompare:(QuestionRecord *)object;
+
 @end

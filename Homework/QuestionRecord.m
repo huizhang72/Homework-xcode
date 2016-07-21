@@ -33,6 +33,8 @@
     return _time;
 }
 
-
+- (NSComparisonResult)timeCompare:(QuestionRecord *)object {
+    return [self getTime] < [object getTime];
+}
 
 @end

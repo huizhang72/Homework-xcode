@@ -32,9 +32,8 @@ static NSMutableArray *quiz;
 }
 
 +(void)addQuestion:(QuestionRecord *)question {
-    int rows = [[QuizRecord sharedQuizRecord] count];
-    NSLog(@"now %d", rows);
     [quiz addObject:question];
+    [quiz sortUsingSelector:@selector(timeCompare:)];
 }
 
 -(QuestionRecord *)getQuestion:(int)index {

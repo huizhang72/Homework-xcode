@@ -80,8 +80,8 @@
 				2D6F61951D3B458F0040241D /* Supporting Files */,
 				2DA5CFAE1D3EFB7300B7316C /* QuestionRecord.m */,
 				2DA5CFB01D3EFB8400B7316C /* QuestionRecord.h */,
-				2DA5CFB11D3EFB8F00B7316C /* QuizRecord.h */,
 				2DA5CFB21D3EFB9F00B7316C /* QuizRecord.m */,
+				2DA5CFB11D3EFB8F00B7316C /* QuizRecord.h */,
 			);
 			path = Homework;
 			sourceTree = "<group>";
