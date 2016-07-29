@@ -94,7 +94,7 @@
         self.questionLabel.text = [NSString stringWithFormat:@"%d %@ %d =", result, @"\u00F7", self.a];
     }
     
-    NSLog(@"%d [%d] %d answer:%d progress:%f", self.a, operation, self.b, self.answer, self.progressView.progress);
+    //NSLog(@"%d [%d] %d answer:%d progress:%f", self.a, operation, self.b, self.answer, self.progressView.progress);
     
     self.numberLabel.text = [self toString:self.currentQuestionIndex+1];
     self.progressView.progress = 1.0 * (self.currentQuestionIndex + 1) / self.totalQuestions;

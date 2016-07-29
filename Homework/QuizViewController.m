@@ -17,8 +17,7 @@
     [super viewDidLoad];
     // Get the height of the status bar
 
-    CGFloat statusBarHeight =
-    [UIApplication sharedApplication].statusBarFrame.size.height;
+    CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
     UIEdgeInsets insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0);
     
     self.tableView.contentInset = insets;
@@ -27,9 +26,14 @@
 
 #pragma mark - Table View Data Source and Delegate
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    int rows = [[QuizRecord sharedQuizRecord] count];
-    NSLog(@"table: %d", rows);
+    int rows = (int)[[QuizRecord sharedQuizRecord] count];
+    NSLog(@"table total raw: %d", rows);
     return rows;
 }
 
